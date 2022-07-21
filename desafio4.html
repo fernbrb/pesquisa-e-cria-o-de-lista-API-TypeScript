@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="title">Gerenciamento de listas</div>
+    <div class="content">
+
+        <div id="manager">
+            <input id="login" placeholder="Login" onchange="preencherLogin(event)">
+            <input id="senha" placeholder="Senha" type="password" onchange="preencherSenha(event)">
+            <input id="api-key" placeholder="Api Key" onchange="preencherApi(event)">
+            <button id="login-button" disabled>Login</button>
+            <input id="nome-lista" placeholder="Nome da nova lista" onchange="preencherNomeLista(event)" disabled>
+            <input id="descricao-lista" placeholder="Descrição da nova lista" onchange="preencherDescricao(event)"
+                disabled>
+            <button id="criar-lista" disabled>Criar lista</button>
+            <input id="id-lista" placeholder="ID da lista" onpointerenter="validateIdInput()" onchange="preencherId()"
+                disabled>
+            <button id="pegar-lista" disabled onclick="getList()">Pegar lista</button>
+            <button id="adicionar-filme-lista" disabled>Adicionar filme à lista</button>
+            <div id="lista-atual" class="blue"></div>
+        </div>
+        <div id="search-container" class="blue">
+            <input id="search" placeholder="Escreva...">
+            <button id="search-button">Pesquisar Filme</button>
+        </div>
+        <div class="instructions">
+            <h1>
+                <p id="filme-novo"></p>
+                <p>Instruções</p>
+                <p>Para adicionar filmes em uma lista:</p>
+                <p>I - Informe o numero da lista e em seguida clique em "Pegar lista"</p>
+                <p>II - Pesquise o nome do filme, clique no nome do filme, em seguida clique em "Adicionar filme à
+                    lista"</p>
+            </h1>
+        </div>
+    </div>
+    <div id="new-list-container">
+        
+    </div>
+    <script src="./desafio4.js"></script>
+</body>
+
+</html>
